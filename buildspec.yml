@@ -1,12 +1,14 @@
-install:
-  runtime-version:
-    java:corretto11
-  build:
-    commands:
-      - ./gradlew bootJar
+version: 0.2
 
-  post_build:
-    commands:
+phases:
+ install:
+   runtime-version:
+     java:corretto11
+   build:
+     commands:
+      - ./gradlew bootJar
+   post_build:
+     commands:
       - echo Build completed
 artifacts:
   files:
